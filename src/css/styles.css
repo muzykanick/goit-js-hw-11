@@ -5,8 +5,6 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +20,212 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 36px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.search-input {
+  width: 272px;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+  font-size: 16px;
+  transition: border 300ms ease-in-out;
+}
+
+.search-input:hover {
+  border: 1px solid #000;
+}
+
+.search-input:focus {
+  border: 1px solid #4e75ff;
+}
+
+.search-button {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  border: none;
+
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.64px;
+
+  transition: background-color 300ms ease-in-out;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: #6c8cff;
+  outline: none;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  row-gap: 24px;
+  column-gap: 24px;
+  background-color: #fff;
+}
+
+.gallery-item {
+  border: 1px solid #808080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+}
+
+.card-description {
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  width: 360px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+.description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.accent {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.loader {
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+.loader {
+  --w: 10ch;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  letter-spacing: var(--w);
+  width: var(--w);
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow:
+    calc(-1*var(--w)) 0,
+    calc(-2*var(--w)) 0,
+    calc(-3*var(--w)) 0,
+    calc(-4*var(--w)) 0,
+    calc(-5*var(--w)) 0,
+    calc(-6*var(--w)) 0,
+    calc(-7*var(--w)) 0,
+    calc(-8*var(--w)) 0,
+    calc(-9*var(--w)) 0;
+  animation: l16 2s infinite;
+}
+
+.loader:before {
+  content: "Loading...";
+}
+
+@keyframes l16 {
+  20% {
+    text-shadow:
+      calc(-1*var(--w)) 0,
+      calc(-2*var(--w)) 0 red,
+      calc(-3*var(--w)) 0,
+      calc(-4*var(--w)) 0 #ffa516,
+      calc(-5*var(--w)) 0 #63fff4,
+      calc(-6*var(--w)) 0,
+      calc(-7*var(--w)) 0,
+      calc(-8*var(--w)) 0 green,
+      calc(-9*var(--w)) 0;
+  }
+
+  40% {
+    text-shadow:
+      calc(-1*var(--w)) 0,
+      calc(-2*var(--w)) 0 red,
+      calc(-3*var(--w)) 0 #e945e9,
+      calc(-4*var(--w)) 0,
+      calc(-5*var(--w)) 0 green,
+      calc(-6*var(--w)) 0 orange,
+      calc(-7*var(--w)) 0,
+      calc(-8*var(--w)) 0 green,
+      calc(-9*var(--w)) 0;
+  }
+
+  60% {
+    text-shadow:
+      calc(-1*var(--w)) 0 lightblue,
+      calc(-2*var(--w)) 0,
+      calc(-3*var(--w)) 0 #e945e9,
+      calc(-4*var(--w)) 0,
+      calc(-5*var(--w)) 0 green,
+      calc(-6*var(--w)) 0,
+      calc(-7*var(--w)) 0 yellow,
+      calc(-8*var(--w)) 0 #ffa516,
+      calc(-9*var(--w)) 0 red;
+  }
+
+  80% {
+    text-shadow:
+      calc(-1*var(--w)) 0 lightblue,
+      calc(-2*var(--w)) 0 yellow,
+      calc(-3*var(--w)) 0 #63fff4,
+      calc(-4*var(--w)) 0 #ffa516,
+      calc(-5*var(--w)) 0 red,
+      calc(-6*var(--w)) 0,
+      calc(-7*var(--w)) 0 grey,
+      calc(-8*var(--w)) 0 #63fff4,
+      calc(-9*var(--w)) 0;
+  }
+}
+
+
+
+.visible {
+  visibility: visible;
 }
